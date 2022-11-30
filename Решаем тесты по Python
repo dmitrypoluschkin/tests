@@ -1,0 +1,698 @@
+import math
+from math import ceil
+
+
+q = int(input("Введите количество бутылок: "))
+5
+a = int(input("Введите количество бутылок: "))
+sum_q = q * 0.1
+sum_a = a * 0.25
+sum_all = sum_q + sum_a
+print('%.2f' %sum_all, '$')
+
+
+6
+su = float(input("Введите сумму заказа: "))
+nal = su * 0.13
+tee_many = su * 0.18
+su_all = su + nal + tee_many
+
+print(nal, "$")
+print(tee_many, "$")
+print('%.2f' %su_all, "$")
+
+8
+col_s = int(input("Введите кол-во товара:"))
+col_b = int(input("Введите кол-во товара:"))
+mass_s = col_s * 0.75
+mass_b = col_b * 112
+mass_all = (mass_s + mass_b) / 1000
+print("Общий вес составит: ", "%.3f" %mass_all, "кг." )
+
+9
+initial_deposit = float(input("Введите сумму депозита: "))
+year_1 = initial_deposit + initial_deposit * 0.04
+year_2 = year_1 + year_1 * 0.04
+year_3 = year_2 + year_2 * 0.04
+print("Сумма счета после 1 года: ", "%.2f" %year_1)
+print("Сумма счета после 2 лет: ", "%.2f" %year_2)
+print("Сумма счета после 3 лет: ", "%.2f" %year_3)
+
+10
+a = int(input("Введите целое число: "))
+b = int(input("Введите целое число: "))
+
+print(a + b)
+print(a-b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(math.log10(a))
+print(a ** b)
+
+11
+
+gal = float(input('галлоны'))
+mile = float(input('мили'))
+
+g =  gal * 3.785
+m = mile * 1.609
+
+f_c =  (g / m)*100
+print(f_c, " литров на 100 км.")
+
+13
+toonie = 200
+loonie = 100
+quarter = 25
+ten = 10
+five = 5
+one = 1
+
+cents = int(input("Введите ссуму сдачи в центах: "))
+
+print(" ", cents // toonie, "2-доллоровых монет")
+cents = cents % toonie
+print(" ", cents // loonie, "1-доллоровых монет")
+cents = cents % loonie
+print(" ", cents // quarter, "25–центовых монет")
+cents = cents % quarter
+print(" ", cents // ten, "10–центовых монет")
+cents = cents % ten
+print(" ", cents // five, "5–центовых монет")
+cents = cents % five
+print(" ", cents // one, "1–центовых монет")
+cents = cents % one
+
+print('', cents, "центов")
+
+14
+dm = 2.54
+ft = 30.48
+
+print('Укажите ваш рост.')
+ft_user = int(input('введите футы: '))
+dm_user = float(input('введите дюймы: '))
+
+height = (ft_user * ft) + (dm_user * dm)
+
+print('Ваш рост ', height, " сантиметров." )
+
+15
+ml = 5280
+jd = 3
+dm = 0.0833
+
+distance = float(input("Введите растояние в футах: "))
+
+ml_user = distance / ml
+jd_user = distance / jd
+dm_user = distance / dm
+
+print("Расстояние равно: ")
+print("%.3f" %ml_user, " миль")
+print("%.3f" %jd_user, " ярдов")
+print("%.3F" %dm_user, " дюймов")
+
+
+35
+int_user = int(input("Введите число: "))
+if int_user % 2 == 0:
+    print("число четное")
+else:
+    print("число не четное") 
+
+36
+
+age_human = int(input("Введите возраст: "))
+dog_age = 0
+if age_human == 1:
+    dog_age = 10.5
+elif age_human == 2:
+    dog_age = 21
+elif age_human >= 3:
+    dog_age = 21 + (age_human - 2) * 4
+elif age_human < 0:
+    print("Ошибка! Ведите положительное число!")
+print("Возраст пёсика - ", dog_age)
+
+37
+letter = str(input("Введите букву: "))
+alf = ['a', 'e', 'i', 'o', 'u']
+if letter in alf:
+    print("Буква гласная")
+elif letter == "y":
+    print("Буква может быть как гласной так и соглсной.")
+else:
+    print("Буква согласная")
+
+38
+
+num = int(input("Введите колличество сторон: "))
+if num == 3:
+    print("Это треугольник")
+elif num == 4:
+    print("четырехугольник")
+elif num == 5:
+    print("пятиугольник")
+elif num == 6:
+    print("шестиугольник")
+elif num == 7:
+    print("семиугольник")
+elif num == 8:
+    print("восьмиугольник")
+elif num == 9:
+    print("девятиугольник")
+elif num == 10:
+    print("десятиугольник")
+else:
+    print("это больше десятиугольник! это какой-то парадокс!")
+
+39
+month = input("Введите название месяца: ")
+
+if month == "январь" or month == "аперль" or month == "июнь" or month == "сентябрь" or month == "ноябрь":
+    print(f"В  {month} 30 дней")
+
+elif month == "март" or month == "май" or month == "июль" or month == "август" or month == "октябрь" or month == "декабрь":
+    print(f"В  {month} 31 день")
+
+else:
+    print("В феврале 28 или 29 дней")
+
+
+40
+db = int(input("Введите колличество децебелл(от 40 до 130): ")) 
+if db <= 40:
+    print("Это не серьезно! это мертвая тишина, бро!")  
+elif db > 40 and db < 70:
+    print("Это уровень тихой комнаты")
+elif db ==70:
+    print("Это между тихой комнатой и будильником.")
+elif db > 70 and db < 106:
+    print("Так звинят будильники. Т-р-р-р-р...")
+elif db == 106:
+    print("Это между будильником и газонокосилкой")
+elif db > 106 and db < 130:
+    print("Это гозонокосилка")
+else:
+    print("ЭТО ОТБОЙНЫЙ МОЛОТОК! ДАЛЬШЕ МОЖЕШЬ НЕ СПРАШИВАТЬ! ВСЕ РАВНО Я ТЕБЯ НЕ СЛЫШУ, БРО!!!")
+
+
+41
+a = float(input("a = : "))
+b = float(input("d = : "))
+c = float(input("c = : "))
+
+if a == b and b == c:
+    print("Это равностороннний треугольник.")
+elif a == b or b == c or c == a:
+    print("это равнобедренный треугольник")
+elif a != b and b != c and c != a:
+    print("это разносторонний треугольник")
+
+45
+date = int(input("Введите дату: "))
+month = input("Введите месяц: ")
+if date == 1 and month == "январь":
+    print("New Year!")
+elif date == 1 and month == "июль":
+    print("День Канады")
+elif date == 25 and month == "декабрь":
+    print("Рождество!")
+else:
+    print("Будний день. Может и праздник но не госсударственный...")
+
+
+46
+name = input("введите букву клетки: ")
+num = int(input("введите цифру клетки: "))
+if name == "a" and num % 2 == 0:
+    print("белая")
+elif name == "a" and num % 2 != 0:
+    print("черная")
+
+if name == "b" and num % 2 == 0:
+    print("черная")
+elif name == "b" and num % 2 != 0:
+    print("белая")
+
+if name == "c" and num % 2 == 0:
+    print("белая")
+elif name == "c" and num % 2 != 0:
+    print("черная")
+
+if name == "d" and num % 2 == 0:
+    print("черная")
+elif name == "d" and num % 2 != 0:
+    print("белая")
+
+if name == "e" and num % 2 == 0:
+    print("белая")
+elif name == "e" and num % 2 != 0:
+    print("черная")
+
+if name == "f" and num % 2 == 0:
+    print("черная")
+elif name == "f" and num % 2 != 0:
+    print("белая")
+
+if name == "g" and num % 2 == 0:
+    print("белая")
+elif name == "g" and num % 2 != 0:
+    print("черная")
+
+if name == "h" and num % 2 == 0:
+    print("черная")
+elif name == "h" and num % 2 != 0:
+    print("белая")
+
+
+
+def outer():
+    n = 5
+
+    def inner():
+        nonlocal n
+        n += 1
+        print(n)
+
+    return inner
+
+fn = outer()
+fn()
+fn()
+
+
+47
+month = input("Введите название месяца: ")
+day = int(input("Введите число: "))
+
+if month =="апрель" or month == "май":
+    print("весна")
+elif month =="март":
+    if day > 20:
+        print("весна")
+    if day < 20:
+        print("зима")
+
+if month =="июль" or month == "август":
+    print("лето")
+elif month =="июнь":
+    if day >= 20:
+        print("лето")
+    if day < 20:
+        print("весна")
+
+if month =="октябрь" or month == "ноябрь":
+    print("осень")
+elif month =="сентябрь":
+    if day < 20:
+        print("лето")
+    elif day >= 20:
+        print("осень")
+
+if month =="январь" or month == "февраль":
+    print("зима")
+elif month =="декабрь":
+    if day < 20:
+        print("осень")
+    elif day >= 20:
+        print("зима")
+
+
+
+49
+year = int(input("Введите год: "))
+
+if year % 12 == 1:
+    print("петух")
+
+elif year % 12 == 2:
+    print("собака")
+
+elif year % 12 == 3:
+    print("свинья")
+
+elif year % 12 == 4:
+    print("крыса")
+
+elif year % 12 == 5:
+    print("бык")
+
+elif year % 12 == 6:
+    print("тигр")
+
+elif year % 12 == 7:
+    print("кролик")
+
+elif year % 12 == 8:
+    print("дракон")
+
+elif year % 12 == 9:
+    print("змея")
+
+elif year % 12 == 10:
+    print("лошадь")
+
+elif year % 12 == 11:
+    print("коза")
+
+elif year % 12 == 0:
+    print("обезьяна")
+
+
+letters = list("Hello")
+print(letters)
+
+people = ["Tom", "Sam", "Bob",]
+i=0
+while i < len(people):
+    print(people[i])
+    i += 1
+
+
+
+q = "Ksy"
+a = q[::-1]
+print(a.capitalize())
+
+q = ["Tom", "Bob", "Alice", "Sam", "Bill"]
+q.reverse()
+print(q)
+
+50
+q= float(input("Введите кол-во быллов землетресения: "))
+if q < 2.0:
+    print("минимальное")
+elif q >= 2.0 and q < 3.0:
+    print("Очень слабое")
+elif q >= 3.0 and q < 4.0:
+    print("Слабое")
+elif q >= 4.0 and q < 5.0:
+    print("Промежуточное")
+elif q >= 5.0 and q < 6.0:
+    print("Умеренное")
+elif q >= 6.0 and q < 7.0:
+    print("Сильное")
+elif q >= 7.0 and q < 8.0:
+    print("Очень сильное")
+elif q >= 8.0 and q < 10.0:
+    print("Огромное")
+else:
+    print("Разрушительное")
+
+
+51
+a = float(input("Введите число a: "))
+b = float(input("Введите число b: "))
+c = float(input("Введите число c: "))
+
+d = b**2 - 4 * a * c
+
+if d > 0:
+    x_1 = (-b + math.sqrt(d)) / (2*a)
+    x_2 = (-b - math.sqrt(d)) / (2*a)
+    print(round(x_1, 2), round(x_2, 2))
+
+elif d == 0:
+    x = -b / (2*a)
+    print(round(x, 2))
+
+else:
+    print("корней нет")
+
+def countdown (i):
+    print(i)
+    if i<=1:
+        return
+    else:
+        countdown(i-1)   
+
+
+#factorial 
+def fact(x):
+    if x == 1:
+        return x
+    else:
+        return x * fact(x-1)
+
+print(fact(3))
+
+
+#global #and nonlocal
+name = "Max"
+
+def name_1():
+    name = "Bob"
+
+    def name_2():
+        #nonlocal name
+        name = "Tom"
+
+        print(name)
+
+    name_2()
+    print(name)
+name_1()
+print(name)
+
+def names():
+    n = 5
+
+    def name():
+        nonlocal n
+        n += 4
+        print(n)
+
+    return name
+
+fn = names()
+fn()
+fn()
+fn()
+
+def wizard(stars):
+    def output_funk():
+        print('*********')
+        stars()
+        print('**********')
+
+    return output_funk()
+
+@wizard
+def hello():
+    print("Hello, mather fucker!")
+
+hello()
+
+52 
+letter = input("Введите оценку буквой: ")
+letter = letter.upper()
+
+if letter == "f":
+    print("Ваша оценка - 0") 
+
+elif letter =="D":
+    print("Ваша оценка - 1")
+elif letter == "D+":
+    print("Ваша оценка - 1.3")
+
+elif letter =="C":
+    print("Ваша оценка - 2")
+elif letter == "C+":
+    print("Ваша оценка - 2.3")
+elif letter == "C-":
+    print("Ваша оценка - 1.7")
+
+elif letter =="B":
+    print("Ваша оценка - 3")
+elif letter == "B+":
+    print("Ваша оценка - 3.3")
+elif letter == "B-":
+    print("Ваша оценка - 2.7")
+
+elif letter =="A":
+    print("Ваша оценка - 4")
+elif letter == "A+":
+    print("Ваша оценка - 4")
+elif letter == "A-":
+    print("Ваша оценка - 3.7")
+
+else:
+    print("Ошибка! Введите корректную букву!")
+
+54
+r = float(input("Введите Ваш рейтинг: "))
+p = r * 2400
+
+if r == 0:
+    print(f"Ваш рейтинг в значении - низкий. прибавка к з/п соствит - {p} $")
+
+if r == 0.4:
+    print(f"Ваш рейтинг в значении - средний. прибавка к з/п соствит - {p} $")
+
+if r >= 0.6 and r <= 1:
+    print(f"Ваш рейтинг в значении - высокий. прибавка к з/п соствит - {p} $")
+
+elif r > 1:
+    print("Прекращай выебываться!")
+
+
+#Циклы
+
+65
+entry_list = []
+while True:
+    user_entry = int(input("Enter a non Zero number(0 to quit entering: "))
+    if user_entry == 0:
+        break
+    entry_list.append(user_entry)
+
+total = 0    
+for i in entry_list:
+    total = total + i
+avg = total/len(entry_list)
+
+print("Counter",len(entry_list))
+print("The total is: ", total)
+print("The average is: ",avg)
+
+#fibanacci
+def fib(n):
+    if n == 1:
+        return 0 
+    elif n == 2:
+        return 1
+    return fib(n-1) + fib(n-2)
+
+print(fib(5))
+
+
+def star(n):
+    if len(n) == 1 or len(n) == 2:
+        return n
+    return n[0] + "*" + star(n[1:-1]) + "*" + n[-1]
+
+n = input()
+print(star(n))
+
+
+64
+price = [4.95, 9.95, 14.95, 19.95, 24.95]
+for x in price:
+    print("При цене равной: ", x)
+    print(" Цена  с учетом скидки: ", f'{x*0.6:.{2}f}')
+    print("  Ваша скидка - ", f'{x-x*0.6:.{2}f}')
+
+65
+cel = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+for x in cel:
+    print("Температура по Цельсию: ", x)
+    print("Равна: ", f'{x *1.8+32:.{2}f}', " - по Фаренгейту.")
+
+66
+cents = 5
+cent_5 = 0.05
+total = 0.00
+line = input("Введите цену товара(для выхода оставьте строку пустой): ")
+while line != "":
+    total += float(line)
+    line = input("Введите цену товара(для выхода оставьте строку пустой): ")
+print("Итого к оплате: ", f'{total:.{2}f}', "$", "Советую расплатиться пока я не достал дробовик или не вызвал копов!")
+
+round_price = total * 100 % cents
+if round_price < cents / 2:
+    sum_total = total - round_price / 100
+else:
+    sum_total = total + cent_5 - round_price / 100
+
+print("Или - ", f'{sum_total:.{2}f}', "$", " Если наличкой!")
+
+
+
+
+def outer():
+    name = "Bob"
+
+    def inner():
+        nonlocal name
+        name = "Nick"
+        print(name)
+
+    return inner
+
+fn = outer()
+fn()
+
+
+def fn_1(q):
+    def fn_2(a): return a * q 
+
+    return fn_2
+
+fn_3 = fn_1(4)
+print(fn_3(5))
+print(fn_3(4))
+
+
+def name(b):
+    def say(q): return b + q
+
+    return say
+
+total = name("Tom")
+print(total(', is my friend!'))
+
+# decorators
+def benchmark(funk):
+    import time
+
+    def wrapper():
+        start = time.time()
+        funk()
+        end = time.time()
+        print("время выполнения: {}.секунд.".format(end - start))
+    return wrapper
+
+@benchmark
+def fetch_page():
+
+    page = [i ** 3 for i in range(100000) if i % 2 == 0]
+
+
+fetch_page()
+
+85
+
+def triangl(a, b):
+    kvgip = a**2 + b**2
+    gip = math.sqrt(kvgip)
+    return gip
+
+def main():
+    a = int(input("a: "))
+    b = int(input("b: "))
+    print("гипотинуза = ", triangl(a, b))
+
+main()
+
+86
+def pro(sum):
+    return base_tax + ceil(sum / 140) * meters_tax
+
+base_tax = 4
+meters_tax = 0.25
+
+print(pro(100))
+print(pro(5000))
+
+
+    
+
+
+
+
+
+
